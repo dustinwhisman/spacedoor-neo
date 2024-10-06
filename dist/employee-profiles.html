@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Profiles - Spacedoor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" href="/SpaceDoorLogo.svg" type="image/svg+xml">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">Rules of Engagement</a>
+        <a href="/employee-profiles">Employee Profiles</a>
+      </nav>
+    </header>
+    <main>
+      <h1>SD-HQ Employee Profiles</h1>
+      <div data-existing-profiles></div>
+      
+      <h2>Employee Onboarding</h2>
+      <p>
+        Please fill out your new employee paperwork before beginning your first shift at Space Door Headquarters.
+      </p>
+      <form data-new-employee-form class="obj-form">
+        <div>
+          <label for="employee-name">Name</label>
+          <input id="employee-name" type="text" name="employee-name" autocapitalize="on" />
+        </div>
+        <fieldset>
+          <legend>Height</legend>
+          <div class="inline-fields">
+            <div>
+              <input id="height-feet" type="text" name="height-feet" class="input-short" inputmode="numeric" pattern="^(0|[1-9]\d*)$" />
+              <label for="height-feet" class="inline-label">Feet</label>
+            </div>
+            <div>
+              <input id="height-inches" type="text" name="height-inches" class="input-short" inputmode="numeric" pattern="^(0|[1-9]\d*)$" />
+              <label for="height-inches" class="inline-label">Inches</label>
+            </div>
+          </div>
+        </fieldset>
+        <div>
+          <label for="weight">Weight (lbs)</label>
+          <input id="weight" type="text" name="weight" class="input-short" inputmode="numeric" pattern="^(0|[1-9]\d*)$" />
+        </div>
+        <div>
+          <label for="origin">Country/Planet of Origin</label>
+          <input id="origin" type="text" name="origin" autocapitalize="on" />
+        </div>
+        <div>
+          <label for="age">Age</label>
+          <input id="age" type="text" name="age" class="input-short" inputmode="numeric" pattern="^(0|[1-9]\d*)$" />
+        </div>
+        <div>
+          <label for="gender">Gender</label>
+          <input id="gender" type="text" name="gender" autocapitalize="on" />
+        </div>
+        <fieldset>
+          <legend>
+            Charm
+          </legend>
+          <div class="inline-fields justify-between">
+            <label>
+              <input type="radio" name="charm" value="2" aria-describedby="introvert">
+              2
+            </label>
+            <label>
+              <input type="radio" name="charm" value="3" aria-describedby="introvert">
+              3
+            </label>
+            <label>
+              <input type="radio" name="charm" value="4" aria-describedby="introvert">
+              4
+            </label>
+            <label>
+              <input type="radio" name="charm" value="5" aria-describedby="introvert">
+              5
+            </label>
+            <label>
+              <input type="radio" name="charm" value="6" aria-describedby="extrovert">
+              6
+            </label>
+            <label>
+              <input type="radio" name="charm" value="7" aria-describedby="extrovert">
+              7
+            </label>
+            <label>
+              <input type="radio" name="charm" value="8" aria-describedby="extrovert">
+              8
+            </label>
+            <label>
+              <input type="radio" name="charm" value="9" aria-describedby="extrovert">
+              9
+            </label>
+          </div>
+          <div class="inline-fields justify-between">
+            <p id="introvert">Introvert (2-5)</p>
+            <p id="extrovert">Extrovert (6-9)</p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>
+            Athletics
+          </legend>
+          <div class="inline-fields justify-between">
+            <label>
+              <input type="radio" name="athletics" value="2" aria-describedby="feather-weight">
+              2
+            </label>
+            <label>
+              <input type="radio" name="athletics" value="3" aria-describedby="feather-weight">
+              3
+            </label>
+            <label>
+              <input type="radio" name="athletics" value="4" aria-describedby="feather-weight">
+              4
+            </label>
+            <label>
+              <input type="radio" name="athletics" value="5" aria-describedby="feather-weight">
+              5
+            </label>
+            <label>
+              <input type="radio" name="athletics" value="6" aria-describedby="heavy-weight">
+              6
+            </label>
+            <label>
+              <input type="radio" name="athletics" value="7" aria-describedby="heavy-weight">
+              7
+            </label>
+            <label>
+              <input type="radio" name="athletics" value="8" aria-describedby="heavy-weight">
+              8
+            </label>
+            <label>
+              <input type="radio" name="athletics" value="9" aria-describedby="heavy-weight">
+              9
+            </label>
+          </div>
+          <div class="inline-fields justify-between">
+            <p id="feather-weight">Feather Weight (2-5)</p>
+            <p id="heavy-weight">Heavy Weight (6-9)</p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>
+            Tough
+          </legend>
+          <div class="inline-fields justify-between">
+            <label>
+              <input type="radio" name="tough" value="2" aria-describedby="defense">
+              2
+            </label>
+            <label>
+              <input type="radio" name="tough" value="3" aria-describedby="defense">
+              3
+            </label>
+            <label>
+              <input type="radio" name="tough" value="4" aria-describedby="defense">
+              4
+            </label>
+            <label>
+              <input type="radio" name="tough" value="5" aria-describedby="defense">
+              5
+            </label>
+            <label>
+              <input type="radio" name="tough" value="6" aria-describedby="offense">
+              6
+            </label>
+            <label>
+              <input type="radio" name="tough" value="7" aria-describedby="offense">
+              7
+            </label>
+            <label>
+              <input type="radio" name="tough" value="8" aria-describedby="offense">
+              8
+            </label>
+            <label>
+              <input type="radio" name="tough" value="9" aria-describedby="offense">
+              9
+            </label>
+          </div>
+          <div class="inline-fields justify-between">
+            <p id="defense">Defense (2-5)</p>
+            <p id="offense">Offense (6-9)</p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>
+            Sharp
+          </legend>
+          <div class="inline-fields justify-between">
+            <label>
+              <input type="radio" name="sharp" value="2" aria-describedby="hindsight">
+              2
+            </label>
+            <label>
+              <input type="radio" name="sharp" value="3" aria-describedby="hindsight">
+              3
+            </label>
+            <label>
+              <input type="radio" name="sharp" value="4" aria-describedby="hindsight">
+              4
+            </label>
+            <label>
+              <input type="radio" name="sharp" value="5" aria-describedby="hindsight">
+              5
+            </label>
+            <label>
+              <input type="radio" name="sharp" value="6" aria-describedby="foresight">
+              6
+            </label>
+            <label>
+              <input type="radio" name="sharp" value="7" aria-describedby="foresight">
+              7
+            </label>
+            <label>
+              <input type="radio" name="sharp" value="8" aria-describedby="foresight">
+              8
+            </label>
+            <label>
+              <input type="radio" name="sharp" value="9" aria-describedby="foresight">
+              9
+            </label>
+          </div>
+          <div class="inline-fields justify-between">
+            <p id="hindsight">Hindsight (2-5)</p>
+            <p id="foresight">Foresight (6-9)</p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>
+            Belief
+          </legend>
+          <div class="inline-fields justify-between">
+            <label>
+              <input type="radio" name="belief" value="2" aria-describedby="fantastical">
+              2
+            </label>
+            <label>
+              <input type="radio" name="belief" value="3" aria-describedby="fantastical">
+              3
+            </label>
+            <label>
+              <input type="radio" name="belief" value="4" aria-describedby="fantastical">
+              4
+            </label>
+            <label>
+              <input type="radio" name="belief" value="5" aria-describedby="fantastical">
+              5
+            </label>
+            <label>
+              <input type="radio" name="belief" value="6" aria-describedby="logical">
+              6
+            </label>
+            <label>
+              <input type="radio" name="belief" value="7" aria-describedby="logical">
+              7
+            </label>
+            <label>
+              <input type="radio" name="belief" value="8" aria-describedby="logical">
+              8
+            </label>
+            <label>
+              <input type="radio" name="belief" value="9" aria-describedby="logical">
+              9
+            </label>
+          </div>
+          <div class="inline-fields justify-between">
+            <p id="fantastical">Fantastical (2-5)</p>
+            <p id="logical">Logical (6-9)</p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Main Weapon</legend>
+          <div class="inline-fields">
+            <div>
+              <label for="main-weapon-name">Name</label>
+              <input id="main-weapon-name" type="text" name="main-weapon-name" autocapitalize="on" />
+            </div>
+            <div>
+              <label for="main-weapon-attribute">Attribute</label>
+              <select id="main-weapon-attribute" name="main-weapon-attribute">
+                <option value="">-- Select One --</option>
+                <option value="introvert">Introvert</option>
+                <option value="extrovert">Extrovert</option>
+                <option value="feather-weight">Feather Weight</option>
+                <option value="heavy-weight">Heavy Weight</option>
+                <option value="defense">Defense</option>
+                <option value="offense">Offense</option>
+                <option value="hindsight">Hindsight</option>
+                <option value="foresight">Foresight</option>
+                <option value="fantastical">Fantastical</option>
+                <option value="logical">Logical</option>
+              </select>
+            </div>
+            <div>
+              <label for="main-weapon-modifier-1">Modifier 1</label>
+              <input id="main-weapon-modifier-1" type="text" name="main-weapon-modifier-1" autocapitalize="on" />
+            </div>
+            <div>
+              <label for="main-weapon-modifier-2">Modifier 2</label>
+              <input id="main-weapon-modifier-2" type="text" name="main-weapon-modifier-2" autocapitalize="on" />
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Side Arm</legend>
+          <div class="inline-fields">
+            <div>
+              <label for="side-arm-name">Name</label>
+              <input id="side-arm-name" type="text" name="side-arm-name" autocapitalize="on" />
+            </div>
+            <div>
+              <label for="side-arm-attribute">Attribute</label>
+              <select id="side-arm-attribute" name="side-arm-attribute">
+                <option value="">-- Select One --</option>
+                <option value="introvert">Introvert</option>
+                <option value="extrovert">Extrovert</option>
+                <option value="feather-weight">Feather Weight</option>
+                <option value="heavy-weight">Heavy Weight</option>
+                <option value="defense">Defense</option>
+                <option value="offense">Offense</option>
+                <option value="hindsight">Hindsight</option>
+                <option value="foresight">Foresight</option>
+                <option value="fantastical">Fantastical</option>
+                <option value="logical">Logical</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+        <div>
+          <label for="equipment">Equipment</label>
+          <textarea id="equipment" name="equipment" autocapitalize="on" rows="6"></textarea>
+        </div>
+        <div>
+          <button type="submit">Save Employee Profile</button>
+        </div>
+      </form>
+    </main>
+    <script>
+      const getExistingProfiles = () => {
+        const profiles = localStorage.getItem('profiles');
+        if (!profiles) {
+          return [];
+        }
+        
+        return JSON.parse(profiles).map((profile) => ({
+          name: profile.name,
+          id: profile.id,
+        }));
+      };
+      
+      const generateEmployeeID = () => {
+        const segment = () => (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+
+    		return `${segment()}-${segment()}-${segment()}`;
+      };
+      
+      const handleFormSubmission = (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        
+        const profile = {
+          id: generateEmployeeID(),
+        };
+        for (const [key, value] of formData.entries()) {
+          profile[key] = value;
+        }
+        
+        const profiles = getExistingProfiles();
+        profiles.push({
+          name: profile['employee-name'],
+          id: profile.id,
+        });
+        
+        localStorage.setItem('profiles', JSON.stringify(profiles));
+        localStorage.setItem(profile.id, JSON.stringify(profile));
+        
+        window.location.href = `/employee-profile?id=${profile.id}`;
+      };
+      
+      const init = () => {
+        const existingProfilesElement = document.querySelector('[data-existing-profiles]');
+        const profiles = getExistingProfiles();
+        if (profiles.length) {
+          existingProfilesElement.innerHTML = `<ul>
+  ${profiles.map((profile) => `<li><a href="/employee-profile?id=${profile.id}">${profile.name}</a></li>`).join('')}
+</ul>`;
+        } else {
+          existingProfilesElement.innerHTML = '<p>No existing employee profiles found.</p>';
+        }
+        
+        const form = document.querySelector('[data-new-employee-form]');
+        form.addEventListener('submit', handleFormSubmission);
+      };
+      
+      init();
+    </script>
+  </body>
+</html>

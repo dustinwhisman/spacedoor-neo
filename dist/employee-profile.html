@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Profile - Spacedoor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" href="/SpaceDoorLogo.svg" type="image/svg+xml">
+  </head>
+  <body class="with-aside">
+    <header>
+      <nav>
+        <a href="/">Rules of Engagement</a>
+        <a href="/employee-profiles">Employee Profiles</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Employee Profile</h1>
+      <div class="employee-bio">
+        <p class="employee-bio__trait">Height: <span data-height-feet></span>'<span data-height-inches></span>"</p>
+        <p class="employee-bio__trait">Weight: <span data-weight></span>lbs</p>
+        <p class="employee-bio__trait">Country/Planet of Origin: <span data-origin></span></p>
+        <p class="employee-bio__trait">Age: <span data-age></span></p>
+        <p class="employee-bio__trait">Gender: <span data-gender></span></p>
+      </div>
+      <div class="employee-aptitude">
+        <fieldset>
+          <legend class="legend-heading">
+            Charm
+          </legend>
+          <div class="employee-aptitude__range">
+            <label class="employee-aptitude__indicator">
+              <span>2</span>
+              <input type="radio" name="charm" value="2" aria-describedby="introvert">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>3</span>
+              <input type="radio" name="charm" value="3" aria-describedby="introvert">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>4</span>
+              <input type="radio" name="charm" value="4" aria-describedby="introvert">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>5</span>
+              <input type="radio" name="charm" value="5" aria-describedby="introvert">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>6</span>
+              <input type="radio" name="charm" value="6" aria-describedby="extrovert">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>7</span>
+              <input type="radio" name="charm" value="7" aria-describedby="extrovert">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>8</span>
+              <input type="radio" name="charm" value="8" aria-describedby="extrovert">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>9</span>
+              <input type="radio" name="charm" value="9" aria-describedby="extrovert">
+            </label>
+          </div>
+          <div class="inline-fields justify-between">
+            <p id="introvert">Introvert</p>
+            <p id="extrovert">Extrovert</p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="legend-heading">
+            Athletics
+          </legend>
+          <div class="employee-aptitude__range">
+            <label class="employee-aptitude__indicator">
+              <span>2</span>
+              <input type="radio" name="athletics" value="2" aria-describedby="feather-weight">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>3</span>
+              <input type="radio" name="athletics" value="3" aria-describedby="feather-weight">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>4</span>
+              <input type="radio" name="athletics" value="4" aria-describedby="feather-weight">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>5</span>
+              <input type="radio" name="athletics" value="5" aria-describedby="feather-weight">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>6</span>
+              <input type="radio" name="athletics" value="6" aria-describedby="heavy-weight">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>7</span>
+              <input type="radio" name="athletics" value="7" aria-describedby="heavy-weight">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>8</span>
+              <input type="radio" name="athletics" value="8" aria-describedby="heavy-weight">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>9</span>
+              <input type="radio" name="athletics" value="9" aria-describedby="heavy-weight">
+            </label>
+          </div>
+          <div class="inline-fields justify-between">
+            <p id="feather-weight">Feather Weight</p>
+            <p id="heavy-weight">Heavy Weight</p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="legend-heading">
+            Tough
+          </legend>
+          <div class="employee-aptitude__range">
+            <label class="employee-aptitude__indicator">
+              <span>2</span>
+              <input type="radio" name="tough" value="2" aria-describedby="defense">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>3</span>
+              <input type="radio" name="tough" value="3" aria-describedby="defense">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>4</span>
+              <input type="radio" name="tough" value="4" aria-describedby="defense">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>5</span>
+              <input type="radio" name="tough" value="5" aria-describedby="defense">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>6</span>
+              <input type="radio" name="tough" value="6" aria-describedby="offense">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>7</span>
+              <input type="radio" name="tough" value="7" aria-describedby="offense">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>8</span>
+              <input type="radio" name="tough" value="8" aria-describedby="offense">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>9</span>
+              <input type="radio" name="tough" value="9" aria-describedby="offense">
+            </label>
+          </div>
+          <div class="inline-fields justify-between">
+            <p id="defense">Defense</p>
+            <p id="offense">Offense</p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="legend-heading">
+            Sharp
+          </legend>
+          <div class="employee-aptitude__range">
+            <label class="employee-aptitude__indicator">
+              <span>2</span>
+              <input type="radio" name="sharp" value="2" aria-describedby="hindsight">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>3</span>
+              <input type="radio" name="sharp" value="3" aria-describedby="hindsight">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>4</span>
+              <input type="radio" name="sharp" value="4" aria-describedby="hindsight">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>5</span>
+              <input type="radio" name="sharp" value="5" aria-describedby="hindsight">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>6</span>
+              <input type="radio" name="sharp" value="6" aria-describedby="foresight">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>7</span>
+              <input type="radio" name="sharp" value="7" aria-describedby="foresight">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>8</span>
+              <input type="radio" name="sharp" value="8" aria-describedby="foresight">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>9</span>
+              <input type="radio" name="sharp" value="9" aria-describedby="foresight">
+            </label>
+          </div>
+          <div class="inline-fields justify-between">
+            <p id="hindsight">Hindsight</p>
+            <p id="foresight">Foresight</p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="legend-heading">
+            Belief
+          </legend>
+          <div class="employee-aptitude__range">
+            <label class="employee-aptitude__indicator">
+              <span>2</span>
+              <input type="radio" name="belief" value="2" aria-describedby="fantastical">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>3</span>
+              <input type="radio" name="belief" value="3" aria-describedby="fantastical">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>4</span>
+              <input type="radio" name="belief" value="4" aria-describedby="fantastical">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>5</span>
+              <input type="radio" name="belief" value="5" aria-describedby="fantastical">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>6</span>
+              <input type="radio" name="belief" value="6" aria-describedby="logical">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>7</span>
+              <input type="radio" name="belief" value="7" aria-describedby="logical">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>8</span>
+              <input type="radio" name="belief" value="8" aria-describedby="logical">
+            </label>
+            <label class="employee-aptitude__indicator">
+              <span>9</span>
+              <input type="radio" name="belief" value="9" aria-describedby="logical">
+            </label>
+          </div>
+          <div class="inline-fields justify-between">
+            <p id="fantastical">Fantastical</p>
+            <p id="logical">Logical</p>
+          </div>
+        </fieldset>
+      </div>
+      <div class="three-up">
+        <div>
+          <h2>Resilience</h2>
+          <p>Total: <span data-total-resilience></span></p>
+          <div>
+            <label for="resilience">Current Resilience</label>
+            <input id="resilience" type="text" name="resilience" inputmode="numeric" pattern="\d+">
+          </div>
+        </div>
+        <div>
+          <fieldset>
+            <legend class="legend-heading">
+              Luck
+            </legend>
+            <div class="inline-fields justify-between">
+              <label class="luck-indicator">
+                <span>1</span>
+                <input type="checkbox" name="luck" value="1">
+              </label>
+              <label class="luck-indicator">
+                <span>2</span>
+                <input type="checkbox" name="luck" value="2">
+              </label>
+              <label class="luck-indicator">
+                <span>3</span>
+                <input type="checkbox" name="luck" value="3">
+              </label>
+              <label class="luck-indicator">
+                <span>4</span>
+                <input type="checkbox" name="luck" value="4">
+              </label>
+              <label class="luck-indicator">
+                <span>5</span>
+                <input type="checkbox" name="luck" value="5">
+              </label>
+            </div>
+          </fieldset>
+        </div>
+        <div>
+          <h2>Health</h2>
+          <p>Total: <span data-total-health></span></p>
+          <div>
+            <label for="health">Current Health</label>
+            <input id="health" type="text" name="health" inputmode="numeric" pattern="\d+">
+          </div>
+        </div>
+      </div>
+      <h2>Loadout</h2>
+      <div class="three-up">
+        <div>
+          <fieldset class="stack">
+            <legend class="legend-minor">Main Weapon</legend>
+            <div>
+              <label for="main-weapon-name">Name</label>
+              <input id="main-weapon-name" type="text" name="main-weapon-name" autocapitalize="on" />
+            </div>
+            <div>
+              <label for="main-weapon-attribute">Attribute</label>
+              <select id="main-weapon-attribute" name="main-weapon-attribute">
+                <option value="">-- Select One --</option>
+                <option value="introvert">Introvert</option>
+                <option value="extrovert">Extrovert</option>
+                <option value="feather-weight">Feather Weight</option>
+                <option value="heavy-weight">Heavy Weight</option>
+                <option value="defense">Defense</option>
+                <option value="offense">Offense</option>
+                <option value="hindsight">Hindsight</option>
+                <option value="foresight">Foresight</option>
+                <option value="fantastical">Fantastical</option>
+                <option value="logical">Logical</option>
+              </select>
+            </div>
+            <div>
+              <label for="main-weapon-modifier-1">Modifier 1</label>
+              <input id="main-weapon-modifier-1" type="text" name="main-weapon-modifier-1" autocapitalize="on" />
+            </div>
+            <div>
+              <label for="main-weapon-modifier-2">Modifier 2</label>
+              <input id="main-weapon-modifier-2" type="text" name="main-weapon-modifier-2" autocapitalize="on" />
+            </div>
+          </fieldset>
+        </div>
+        <div>
+          <fieldset class="stack">
+            <legend class="legend-minor">Side Arm</legend>
+            <div>
+              <label for="side-arm-name">Name</label>
+              <input id="side-arm-name" type="text" name="side-arm-name" autocapitalize="on" />
+            </div>
+            <div>
+              <label for="side-arm-attribute">Attribute</label>
+              <select id="side-arm-attribute" name="side-arm-attribute">
+                <option value="">-- Select One --</option>
+                <option value="introvert">Introvert</option>
+                <option value="extrovert">Extrovert</option>
+                <option value="feather-weight">Feather Weight</option>
+                <option value="heavy-weight">Heavy Weight</option>
+                <option value="defense">Defense</option>
+                <option value="offense">Offense</option>
+                <option value="hindsight">Hindsight</option>
+                <option value="foresight">Foresight</option>
+                <option value="fantastical">Fantastical</option>
+                <option value="logical">Logical</option>
+              </select>
+            </div>
+          </fieldset>
+        </div>
+        <div>
+          <label for="equipment" class="legend-minor">Equipment</label>
+          <textarea id="equipment" name="equipment" autocapitalize="on" rows="6"></textarea>
+        </div>
+      </div>
+    </main>
+    <aside aria-label="Skill checks sidebar">
+      <h2>Aptitude Testing</h2>
+      <p>
+        Choose an attribute and your level of preparation to test your aptitude for that skill.
+      </p>
+      <form id="skill-check" class="inline-fields">
+        <div>
+          <label for="attribute">Attribute</label>
+          <select id="attribute" name="attribute">
+            <option value="introvert" selected>Introvert</option>
+            <option value="extrovert">Extrovert</option>
+            <option value="feather-weight">Feather Weight</option>
+            <option value="heavy-weight">Heavy Weight</option>
+            <option value="defense">Defense</option>
+            <option value="offense">Offense</option>
+            <option value="hindsight">Hindsight</option>
+            <option value="foresight">Foresight</option>
+            <option value="fantastical">Fantastical</option>
+            <option value="logical">Logical</option>
+          </select>
+        </div>
+        <div>
+          <label for="dice">Level of Preparation</label>
+          <select id="dice" name="dice">
+            <option value="1" selected>Unprepared (1d10)</option>
+            <option value="2">Prepared (2d10)</option>
+            <option value="3">Skilled (3d10)</option>
+            <option value="4">With Assistance (4d10)</option>
+          </select>
+        </div>
+        <div>
+          <button type="submit">Perform Skill Check</button>
+        </div>
+      </form>
+      <h3>Results</h3>
+      <div data-skill-check-results>
+        <p>No skill checks have been performed recently.</p>
+      </div>
+    </aside>
+    <script>
+      const getEmployeeInfo = () => {
+        const searchParams = new URLSearchParams(window.location.search);
+        const id = searchParams.get('id');
+        const employeeInfo = localStorage.getItem(id);
+        if (!employeeInfo) {
+          return null;
+        }
+        
+        return JSON.parse(employeeInfo);
+      };
+      
+      const setEmployeeName = (name) => {
+        const heading = document.querySelector('h1');
+        if (heading) {
+          document.title = `${name} - Employee Profile - Spacedoor`
+          heading.textContent += `: ${name}`;
+        }
+      };
+      
+      const setEmployeeTrait = (selector, data) => {
+        const element = document.querySelector(selector);
+        if (element) {
+          element.textContent = data;
+        }
+      };
+      
+      const setEmployeeAptitude = (stat, value) => {
+        const levelElement = document.querySelector(`input[name="${stat}"][value="${value}"]`);
+        if (levelElement) {
+          levelElement.checked = true;
+        }
+      };
+      
+      const saveEmployeeInfo = (updatedEmployeeInfo) => {
+        localStorage.setItem(updatedEmployeeInfo.id, JSON.stringify(updatedEmployeeInfo));
+      };
+      
+      const saveLuck = () => {
+        const luckPoints = document.querySelectorAll('input[name="luck"]:checked').length;
+        const employeeInfo = getEmployeeInfo();
+        if (employeeInfo != null) {
+          employeeInfo.luck = luckPoints;
+          saveEmployeeInfo(employeeInfo);
+        }
+      };
+      
+      const initializeLuckListeners = () => {
+        const luckCheckboxes = document.querySelectorAll('input[name="luck"]');
+        luckCheckboxes.forEach((checkbox) => {
+          checkbox.addEventListener('change', saveLuck);
+        });
+      };
+      
+      const setInitialLuck = (luckPoints) => {
+        if (!luckPoints) {
+          return;
+        }
+        
+        const luckCheckboxes = document.querySelectorAll('input[name="luck"]');
+        luckCheckboxes.forEach((checkbox, index) => {
+          if (index < luckPoints) {
+            checkbox.checked = true;
+          }
+        });
+      };
+      
+      const getTotalResilience = (stats) => {
+        let resiliencePoints = 0;
+        stats.forEach((level) => {
+          switch (level) {
+            case '5':
+              resiliencePoints += 1;
+              break;
+            case '4':
+              resiliencePoints += 2;
+              break;
+            case '3':
+              resiliencePoints += 3;
+              break;
+            case '2':
+              resiliencePoints += 4;
+              break;
+            default:
+              break;
+          }
+        });
+        
+        return resiliencePoints + 2;
+      };
+      
+      const getTotalHealth = (stats) => {
+        let healthPoints = 0;
+        stats.forEach((level) => {
+          switch (level) {
+            case '6':
+              healthPoints += 10;
+              break;
+            case '7':
+              healthPoints += 20;
+              break;
+            case '8':
+              healthPoints += 30;
+              break;
+            case '9':
+              healthPoints += 40;
+              break;
+            default:
+              break;
+          }
+        });
+        
+        return healthPoints + 20;
+      };
+      
+      const setInitialInputValue = (selector, value) => {
+        const element = document.querySelector(selector);
+        if (element) {
+          element.value = value;
+        }
+      };
+            
+      const saveInputValue = (type, value) => {
+        const employeeInfo = getEmployeeInfo();
+        if (employeeInfo != null) {
+          employeeInfo[type] = value;
+          saveEmployeeInfo(employeeInfo);
+        }
+      }
+      
+      const initializeInputListeners = () => {
+        const inputs = document.querySelectorAll('input[type="text"], input[type="radio"], select, textarea');
+        inputs.forEach((input) => {
+          input.addEventListener('change', (event) => {
+            saveInputValue(event.target.name, event.target.value);
+          });
+        });
+      };
+      
+      const getTarget = (attribute) => {
+        const employeeInfo = getEmployeeInfo();
+        switch (attribute) {
+          case 'introvert':
+            return ['gte', Number.parseInt(employeeInfo.charm, 10)];
+          case 'extrovert':
+            return ['lte', Number.parseInt(employeeInfo.charm, 10)];
+          case 'feather-weight':
+            return ['gte', Number.parseInt(employeeInfo.athletics, 10)];
+          case 'heavy-weight':
+            return ['lte', Number.parseInt(employeeInfo.athletics, 10)];
+          case 'defense':
+            return ['gte', Number.parseInt(employeeInfo.tough, 10)];
+          case 'offense':
+            return ['lte', Number.parseInt(employeeInfo.tough, 10)];
+          case 'hindsight':
+            return ['gte', Number.parseInt(employeeInfo.sharp, 10)];
+          case 'foresight':
+            return ['lte', Number.parseInt(employeeInfo.sharp, 10)];
+          case 'fantastical':
+            return ['gte', Number.parseInt(employeeInfo.belief, 10)];
+          case 'logical':
+            return ['lte', Number.parseInt(employeeInfo.belief, 10)];
+          default:
+            return ['lte', 0];
+        }
+      };
+      
+      const showSkillCheckResults = (diceResults, numberOfSuccesses, difference) => {
+        const resultsElement = document.querySelector('[data-skill-check-results]');
+        if (!resultsElement) {
+          return;
+        }
+        
+        let template = '<ul>'
+        resultsElement.innerHTML = '';
+        
+        diceResults.forEach(({ success, value }) => {
+          template += `<li>${value} (${success ? 'Success' : 'Failure'})</li>`;
+        });
+        
+        template += '</ul>';
+        
+        template += `<p><b>Number of successes: ${numberOfSuccesses}</b></p>`;
+        template += `<p><b>Margin of success: ${difference}</b></p>`;
+        
+        resultsElement.innerHTML = template;
+      };
+      
+      const rollDice = (attribute, numberOfDice) => {
+        const [comparison, target] = getTarget(attribute);
+        const diceResults = [];
+        let numberOfSuccesses = 0;
+        let difference = 0;
+        
+        for (let i = 0; i < numberOfDice; i += 1) {
+          const roll = Math.ceil(Math.random() * 10);
+          if ((comparison === 'gte' && roll >= target) || (comparison === 'lte' && roll <= target)) {
+            numberOfSuccesses += 1;
+            difference += Math.abs(roll - target);
+            diceResults.push({
+              success: true,
+              value: roll,
+            });
+          } else {
+            diceResults.push({
+              success: false,
+              value: roll,
+            });
+          }
+          
+          if (roll === target) {
+            const employeeInfo = getEmployeeInfo();
+            if (employeeInfo.luck < 5 || !employeeInfo.luck) {
+              if (!employeeInfo.luck) {
+                employeeInfo.luck = 0;
+              }
+              employeeInfo.luck += 1;
+              saveEmployeeInfo(employeeInfo);
+              setInitialLuck(employeeInfo.luck);
+            }
+          }
+        }
+        
+        showSkillCheckResults(diceResults, numberOfSuccesses, difference);
+      };
+      
+      const initializeSkillCheckListener = () => {
+        const skillCheckForm = document.querySelector('#skill-check');
+        if (skillCheckForm) {
+          skillCheckForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            
+            const formData = new FormData(skillCheckForm);
+            const attribute = formData.get('attribute');
+            const dice = Number.parseInt(formData.get('dice'), 10);
+            rollDice(attribute, dice);
+          });
+        }
+      };
+
+      const initializePage = () => {
+        const employeeInfo = getEmployeeInfo();
+        
+        if (employeeInfo == null) {
+          window.location.href = '/not_found';
+          return;
+        }
+        
+        setEmployeeName(employeeInfo['employee-name']);
+        
+        setEmployeeTrait('[data-height-feet]', employeeInfo['height-feet']);
+        setEmployeeTrait('[data-height-inches]', employeeInfo['height-inches']);
+        setEmployeeTrait('[data-weight]', employeeInfo.weight);
+        setEmployeeTrait('[data-origin]', employeeInfo.origin);
+        setEmployeeTrait('[data-age]', employeeInfo.age);
+        setEmployeeTrait('[data-gender]', employeeInfo.gender);
+        
+        setEmployeeAptitude('charm', employeeInfo.charm);
+        setEmployeeAptitude('athletics', employeeInfo.athletics);
+        setEmployeeAptitude('tough', employeeInfo.tough);
+        setEmployeeAptitude('sharp', employeeInfo.sharp);
+        setEmployeeAptitude('belief', employeeInfo.belief);
+        
+        setInitialLuck(employeeInfo.luck);
+        
+        const totalResilience = getTotalResilience([employeeInfo.charm, employeeInfo.athletics, employeeInfo.tough, employeeInfo.sharp, employeeInfo.belief]);
+        setEmployeeTrait('[data-total-resilience]', totalResilience);
+        setInitialInputValue('#resilience', employeeInfo.resilience ?? totalResilience);
+        
+        const totalHealth = getTotalHealth([employeeInfo.charm, employeeInfo.athletics, employeeInfo.tough, employeeInfo.sharp, employeeInfo.belief]);
+        setEmployeeTrait('[data-total-health]', totalHealth);
+        setInitialInputValue('#health', employeeInfo.health ?? totalHealth);
+        
+        setInitialInputValue('#main-weapon-name', employeeInfo['main-weapon-name']);
+        setInitialInputValue('#main-weapon-attribute', employeeInfo['main-weapon-attribute']);
+        setInitialInputValue('#main-weapon-modifier-1', employeeInfo['main-weapon-modifier-1']);
+        setInitialInputValue('#main-weapon-modifier-2', employeeInfo['main-weapon-modifier-2']);
+        
+        setInitialInputValue('#side-arm-name', employeeInfo['side-arm-name']);
+        setInitialInputValue('#side-arm-attribute', employeeInfo['side-arm-attribute']);
+        
+        setInitialInputValue('#equipment', employeeInfo['equipment']);
+      }
+      
+      initializePage();
+      initializeLuckListeners();
+      initializeInputListeners();
+      initializeSkillCheckListener();
+    </script>
+  </body>
+</html>
